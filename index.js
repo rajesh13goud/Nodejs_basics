@@ -4,6 +4,7 @@ const http = require('http');
 const server = http.createServer((req,res)=>{
   // console.log(req.headers);
   const url = req.url;
+  //routing requests
   if(url === '/'){
     res.write('<html>');
     res.write('<head><title>Enter Message</title></head>');
@@ -16,3 +17,4 @@ const server = http.createServer((req,res)=>{
   res.end();
 })
 server.listen(3000);
+
